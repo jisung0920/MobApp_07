@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jisung.mobapp_07.PracActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:id="@+id/e1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_weight="1"
+            android:onClick="onClick"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Sort"
+            android:id="@+id/bSort"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/bSeach"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:textFilterEnabled="true"
+        android:transcriptMode="normal"
+        android:stackFromBottom="true"
+        android:listSelector="@color/colorAccent"
+        android:divider="#f00"
+        android:dividerHeight="1dp"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
